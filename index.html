@@ -1,128 +1,434 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About My Family - Writing Exercise</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    background:#f4f6f9;
-}
+  <title>Grammar Task - Adverbs of Frequency</title>
 
-.container{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
-}
+  <style>
 
-h1,h2{
-    color:#2c3e50;
-}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-textarea{
-    width:100%;
-    min-height:120px;
-    padding:10px;
-    margin-top:10px;
-}
+    body{
+      font-family:Arial, sans-serif;
+      background:#f4f7fb;
+      color:#333;
+      line-height:1.7;
+      padding:20px;
+    }
 
-input{
-    padding:8px;
-    margin:5px;
-}
+    .container{
+      max-width:1100px;
+      margin:auto;
+      background:#ffffff;
+      padding:35px;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
 
-button{
-    background:#3498db;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:5px;
-    cursor:pointer;
-}
+    h1{
+      text-align:center;
+      color:#2c3e50;
+      margin-bottom:10px;
+    }
 
-button:hover{
-    background:#2980b9;
-}
+    .subtitle{
+      text-align:center;
+      color:#555;
+      margin-bottom:25px;
+    }
 
-.correct{
-    color:green;
-    font-weight:bold;
-}
+    .instruction-box{
+      background:#eef6ff;
+      border-left:5px solid #3498db;
+      padding:18px;
+      border-radius:8px;
+      margin-bottom:30px;
+    }
 
-.wrong{
-    color:red;
-    font-weight:bold;
-}
-</style>
+    .word-box{
+      background:#fafafa;
+      padding:20px;
+      border-radius:10px;
+      margin-bottom:30px;
+    }
+
+    .word-box h2{
+      margin-bottom:15px;
+      color:#2c3e50;
+    }
+
+    .word-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .word{
+      background:#3498db;
+      color:white;
+      padding:10px 15px;
+      border-radius:8px;
+      font-weight:bold;
+    }
+
+    .question{
+      background:#fafafa;
+      padding:18px;
+      border-radius:8px;
+      margin-bottom:18px;
+    }
+
+    .question p{
+      font-weight:bold;
+      margin-bottom:12px;
+    }
+
+    select{
+      width:100%;
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:16px;
+      margin-top:10px;
+    }
+
+    button{
+      width:100%;
+      padding:15px;
+      background:#3498db;
+      color:white;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+      cursor:pointer;
+      margin-top:25px;
+    }
+
+    button:hover{
+      background:#2980b9;
+    }
+
+    .result{
+      margin-top:25px;
+      text-align:center;
+      font-size:24px;
+      font-weight:bold;
+    }
+
+    .correct{
+      color:green;
+    }
+
+    .wrong{
+      color:red;
+    }
+
+    .answer-key{
+      margin-top:40px;
+      background:#f9f9f9;
+      padding:25px;
+      border-radius:10px;
+    }
+
+    .answer-key h2{
+      margin-bottom:15px;
+      color:#2c3e50;
+    }
+
+    .answer-key ol{
+      margin-left:20px;
+    }
+
+    .answer-key li{
+      margin-bottom:8px;
+    }
+
+    @media(max-width:768px){
+
+      .container{
+        padding:20px;
+      }
+
+      .word-list{
+        flex-direction:column;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 <body>
 
-<div class="container">
+  <div class="container">
 
-<hr>
+    <h1>INTERMEDIATE GRAMMAR TASK</h1>
 
-<h2>Part A: Fill in the blanks</h2>
+    <div class="subtitle">
+      Topic: Adverbs of Frequency <br>
+      Level: Intermediate (B1)
+    </div>
 
-<p>1. Kelly lives in
-<input id="q1"></p>
+    <div class="instruction-box">
 
-<p>2. Kelly's mother's name is
-<input id="q2"></p>
+      <strong>Instructions:</strong><br>
+      Choose the correct adverb of frequency to complete each sentence.
 
-<p>3. Kelly's father works in a
-<input id="q3"></p>
+    </div>
 
-<p>4. Kelly's sister loves listening to
-<input id="q4"></p>
+    <div class="word-box">
 
-<p>5. Brandy is a pet
-<input id="q5"></p>
+      <h2>Word Box</h2>
 
-<button onclick="checkAnswers()">Check Answers</button>
+      <div class="word-list">
 
-<p id="result"></p>
+        <div class="word">always</div>
+        <div class="word">usually</div>
+        <div class="word">sometimes</div>
+        <div class="word">often</div>
+        <div class="word">never</div>
+        <div class="word">hardly ever</div>
 
-<hr>
+      </div>
 
-<h2>Part B: Write About Your Family</h2>
+    </div>
 
-<p>Write 5–8 sentences about your family.</p>
+    <form id="quizForm">
 
-<textarea placeholder="My name is..."></textarea>
+      <div class="question">
+        <p>1. Dayat ______ loses her keys. She loses them twice a week.</p>
 
-</div>
+        <select name="q1">
+          <option value="">-- Select Answer --</option>
+          <option value="always">always</option>
+          <option value="usually">usually</option>
+          <option value="sometimes">sometimes</option>
+          <option value="often">often</option>
+          <option value="never">never</option>
+          <option value="hardly ever">hardly ever</option>
+        </select>
+      </div>
 
-<script>
-function checkAnswers(){
+      <div class="question">
+        <p>2. Dito and Hilmi ______ hang out together after school.</p>
 
-let score = 0;
+        <select name="q2">
+          <option value="">-- Select Answer --</option>
+          <option value="always">always</option>
+          <option value="usually">usually</option>
+          <option value="sometimes">sometimes</option>
+          <option value="often">often</option>
+          <option value="never">never</option>
+          <option value="hardly ever">hardly ever</option>
+        </select>
+      </div>
 
-const answers = {
-q1:"california",
-q2:"carmen",
-q3:"bank",
-q4:"music",
-q5:"dog"
-};
+      <div class="question">
+        <p>3. Amy ______ recognises the constellations in the sky.</p>
 
-for(let id in answers){
-let user = document.getElementById(id).value.trim().toLowerCase();
+        <select name="q3">
+          <option value="">-- Select Answer --</option>
+          <option value="always">always</option>
+          <option value="usually">usually</option>
+          <option value="sometimes">sometimes</option>
+          <option value="often">often</option>
+          <option value="never">never</option>
+          <option value="hardly ever">hardly ever</option>
+        </select>
+      </div>
 
-if(user === answers[id]){
-score++;
-}
-}
+      <div class="question">
+        <p>4. It is ______ clear in their town because of light pollution.</p>
 
-document.getElementById("result").innerHTML =
-"You got " + score + " out of 5 correct!";
-}
-</script>
+        <select name="q4">
+          <option value="">-- Select Answer --</option>
+          <option value="always">always</option>
+          <option value="usually">usually</option>
+          <option value="sometimes">sometimes</option>
+          <option value="often">often</option>
+          <option value="never">never</option>
+          <option value="hardly ever">hardly ever</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>5. Dito can ______ answer the yellow questions correctly.</p>
+
+        <select name="q5">
+          <option value="">-- Select Answer --</option>
+          <option value="always">always</option>
+          <option value="usually">usually</option>
+          <option value="sometimes">sometimes</option>
+          <option value="often">often</option>
+          <option value="never">never</option>
+          <option value="hardly ever">hardly ever</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>6. The Northern Lights are ______ green.</p>
+
+        <select name="q6">
+          <option value="">-- Select Answer --</option>
+          <option value="always">always</option>
+          <option value="usually">usually</option>
+          <option value="sometimes">sometimes</option>
+          <option value="often">often</option>
+          <option value="never">never</option>
+          <option value="hardly ever">hardly ever</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>7. Sopi says people ______ see the Northern Lights in their country.</p>
+
+        <select name="q7">
+          <option value="">-- Select Answer --</option>
+          <option value="always">always</option>
+          <option value="usually">usually</option>
+          <option value="sometimes">sometimes</option>
+          <option value="often">often</option>
+          <option value="never">never</option>
+          <option value="hardly ever">hardly ever</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>8. Alfi ______ learns something new from Amy.</p>
+
+        <select name="q8">
+          <option value="">-- Select Answer --</option>
+          <option value="always">always</option>
+          <option value="usually">usually</option>
+          <option value="sometimes">sometimes</option>
+          <option value="often">often</option>
+          <option value="never">never</option>
+          <option value="hardly ever">hardly ever</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>9. The weather there is ______ cloudy at night.</p>
+
+        <select name="q9">
+          <option value="">-- Select Answer --</option>
+          <option value="always">always</option>
+          <option value="usually">usually</option>
+          <option value="sometimes">sometimes</option>
+          <option value="often">often</option>
+          <option value="never">never</option>
+          <option value="hardly ever">hardly ever</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>10. Amy is very intelligent, so she ______ wins at quiz games.</p>
+
+        <select name="q10">
+          <option value="">-- Select Answer --</option>
+          <option value="always">always</option>
+          <option value="usually">usually</option>
+          <option value="sometimes">sometimes</option>
+          <option value="often">often</option>
+          <option value="never">never</option>
+          <option value="hardly ever">hardly ever</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="checkAnswers()">
+        Submit Answers
+      </button>
+
+    </form>
+
+    <div id="result" class="result"></div>
+
+    <div class="answer-key">
+
+      <h2>Answer Key</h2>
+
+      <ol>
+        <li>often</li>
+        <li>usually</li>
+        <li>sometimes</li>
+        <li>hardly ever</li>
+        <li>never</li>
+        <li>usually</li>
+        <li>never</li>
+        <li>often</li>
+        <li>often</li>
+        <li>often</li>
+      </ol>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function checkAnswers(){
+
+      const answers = {
+
+        q1:"often",
+        q2:"usually",
+        q3:"sometimes",
+        q4:"hardly ever",
+        q5:"never",
+        q6:"usually",
+        q7:"never",
+        q8:"often",
+        q9:"often",
+        q10:"often"
+
+      };
+
+      let score = 0;
+      let total = 10;
+
+      for(let key in answers){
+
+        const select = document.getElementsByName(key)[0];
+
+        select.style.border = "1px solid #ccc";
+
+        if(select.value === answers[key]){
+
+          score++;
+          select.style.border = "3px solid green";
+
+        } else if(select.value !== ""){
+
+          select.style.border = "3px solid red";
+
+        }
+
+      }
+
+      const result = document.getElementById("result");
+
+      result.innerHTML = `Your Score: ${score} / ${total}`;
+
+      if(score >= 8){
+
+        result.className = "result correct";
+
+      } else {
+
+        result.className = "result wrong";
+
+      }
+
+    }
+
+  </script>
 
 </body>
 </html>
